@@ -45,7 +45,7 @@ function subscribe(){
 
 function goHome(event) {
     event.preventDefault();
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
 
 
@@ -162,7 +162,7 @@ function logout() {
     
     if(confirm('Are you sure you want to log out?')){
         localStorage.removeItem("isLoggedIn");
-        window.location.href = "home.html";
+        window.location.href = "index.html";
     } else {
         console.log('canceled')
     }
@@ -419,7 +419,7 @@ function login(event) {
         document.getElementById("emailIcon").style.color = "white";
         document.getElementById("passIcon").style.color = "white";
 
-        window.location.href = "home.html";
+        window.location.href = "index.html";
         localStorage.setItem("isLoggedIn", "true");
     } else if (emailLog !== "admin@gmail.com" && passLog === "admin") {
         emailError.style.display = "block";
