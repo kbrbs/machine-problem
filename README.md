@@ -1,4 +1,4 @@
-### My first frondend work
+### My first non-responsive frondend work
 
 ---
 
