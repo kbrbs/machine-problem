@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Asap:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+@keyframes fadeInBG {
+    from {
+        filter: blur(3px);
+    }
+
+    to {
+
+        filter: blur(1px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    overflow-y: hidden;
+}
+
+.bgContainer {
+    animation: fadeInBG 1s ease-in forwards;
+    position: absolute;
+    overflow: hidden;
+    opacity: 78%;
+    height: 110%;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    top: -90px;
+}
+
+.container {
+    box-shadow: 0 5px 35px rgba(255, 255, 255, 0.9);
+    border: 2px solid rgb(255, 255, 255);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    position: absolute;
+    margin: 50px auto;
+    padding: 1.5rem;
+    width: 25%;
+}
+
+#loginPage {
+    padding-bottom: 50px;
+    left: 38%;
+    top: 22%;
+}
+
+#registerPage {
+    padding-bottom: 50px;
+    left: 38%;
+    top: 17%;
+}
+
+form {
+    margin: 0 2rem;
+}
+
+.formTitle {
+    font-family: "Amatic SC", sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 6px 0 20px 0;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+input {
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #c7c3c3;
+    padding-left: 2rem;
+    font-size: 15px;
+    padding-bottom: 12px;
+}
+
+input:hover {
+    border-bottom: 1.9px solid #ffffff;
+}
+
+.inputs {
+    padding: 4% 0;
+    position: relative;
+}
+
+.inputs i {
+    position: absolute;
+    color: #ffffff;
+    font-size: 21px;
+    top: 12px;
+}
+
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+input::placeholder {
+    color: transparent;
+    font-size: 19px;
+}
+
+label {
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    left: 1.66em;
+    top: -1.8em;
+    cursor: auto;
+    transition: 0.3s ease all;
+    font-size: 17px;
+    opacity: 40%;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -3.5em;
+    left: 1.8em;
+    color: hsl(0, 0%, 100%);
+    font-size: 17px;
+    opacity: 100%;
+}
+
+.recover {
+    text-align: right;
+    font-size: 13px;
+    margin-bottom: 1rem;
+    padding-top: 7px;
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.recover a:hover {
+    color: rgb(255, 188, 64);
+}
+
+.button {
+    background: rgb(255, 185, 55);
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    cursor: pointer;   
+    color: white;
+    outline: none;
+    border: none;
+    width: 100%; 
+}
+
+.button:hover,
+#signUpBtn:hover {
+    background: rgb(223, 145, 0);
+    transform: scale(1.05);
+}
+
+#hide {
+    display: none;
+    position: absolute;
+    top: 9px;
+    left: 87%;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#show {
+    display: inline;
+    position: absolute;
+    top: 9px;
+    left: 87%;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+
+#hideRegCon {
+    display: none;
+    position: absolute;
+    top: 9px;
+    left: 87%;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#showRegCon {
+    display: inline;
+    position: absolute;
+    top: 9px;
+    left: 87%;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.reg,
+.log {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.log {
+    padding-top: 19px;
+}
+
+.reg{
+    margin-top: 20px;
+}
+
+.link {
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: rgb(255, 188, 64);
+    cursor: pointer;
+}
+
+#registerPage {
+    display: none;
+}
+
+#fnameError,
+#lnameError,
+#emailError,
+#numError,
+#addError,
+#passError,
+#passConError,
+#emailLogError,
+#passLogError {
+    color: rgb(255, 86, 86);
+    position: absolute;
+    left: 345px;
+    display: none;
+}

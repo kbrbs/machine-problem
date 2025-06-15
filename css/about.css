@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Asap:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Great+Vibes&family=Montez&family=Niconne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --bodycolor: #ffe6ca;
+  --head-size: 4rem;
+  --subFont: "Poppins", sans-serif;
+  --headFont2: "Yanone Kaffeesatz", sans-serif;
+  --headFont3: "Bubblegum Sans", sans-serif;
+  --subhead: 1rem;
+  --lineheight: 27px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bodycolor);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.bx-left-arrow-alt{
+  position: relative;
+  font-size: 40px;
+  top: 14%;
+  left: 2%;
+}
+
+.bx-left-arrow-alt:hover{
+  color: rgb(231, 150, 0);
+  cursor: pointer;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+.about h2 {
+  font-family: var(--headFont3);
+  font-size: var(--head-size);
+  text-align: left;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 650px;
+  position: absolute;
+  left: 24%;
+  top: 13%;
+  line-height: var(--lineheight);
+  font-size: var(--subhead);
+  font-family: var(--subFont);
+}
+
+.about-images img {
+  object-fit: cover;
+  position: relative;
+}
+
+#intro1 {
+  border-top-right-radius: 50%;
+  height: 450px;
+  width: 300px;
+  left: 66.6%;
+  top: -45.2%;
+}
+
+#intro2 {
+  border-bottom-right-radius: 50%;
+  height: 300px;
+  width: 300px;
+  top: 44%;
+  left: 7.4%;
+}
+
+#intro3 {
+  border-top-left-radius: 50%;
+  height: 400px;
+  width: 680px;
+  top: 44%;
+  left: 6.6%;
+}
+
+#txt1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.values {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 380px;
+}
+
+.values img{
+  height: 310px;
+  position: absolute;
+  left: 16.74%;
+}
+.interior {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  padding-bottom: 100px;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 30%;
+  border-radius: 180px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.interior h2 {
+  font-family: var(--headFont3);
+  font-size: var(--head-size);
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.interior p {
+  font-family: var(--subFont);
+  font-size: var(--subhead);
+  margin-bottom: 40px;
+  max-width: 710px;
+  line-height: var(--lineheight);
+}
+
+
+#int1 {
+  height: 500px;
+  width: 300px;
+  margin-top: 55px;
+}
+
+#int3 {
+  height: 500px;
+  width: 300px;
+  margin-top: 55px;
+}
+
+.coffeeOverlay1{
+  position: absolute;
+  opacity: 30%;
+}
+
+.coffeeOverlay2{
+  position: absolute;
+  left: 77.43%;
+  top: 1860.52px;
+  opacity: 30%;
+  height: 60%;
+}
+
+.coffeeOverlay3{
+  position: absolute;
+  top: 2220.40px;
+  opacity: 50%;
+  height: 100px;
+  left: 19%;
+}
+
+.coffeeOverlay4{
+  position: absolute;
+  top: 2220.40px;
+  opacity: 50%;
+  left: 39.5%;
+  height: 100px;
+}
+
+.coffeeOverlay5{
+  position: absolute;
+  top: 2220.40px;
+  opacity: 50%;
+  left: 61%;
+  height: 100px;
+}
+
+.coffeeOverlay6{
+  position: absolute;
+  opacity: 50%;
+  left: 58%;
+}
+
+.coffeeOverlay7{
+  position: absolute;
+  opacity: 50%;
+  left: 27%;
+  height: 190px;
+}
+
+.coffeeOverlay8{
+  position: absolute;
+  opacity: 50%;
+  top:1600px;
+  left: 58%;
+  height: 150px;
+}
+
+.coffeeOverlay9{
+  position: absolute;
+  opacity: 50%;
+  left: 23%;
+  height: 150px;
+  top:1400px;
+}

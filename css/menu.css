@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Asap:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Great+Vibes&family=Montez&family=Niconne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+
+@keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+  
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /*========== Colors ==========*/
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: #ffe6ca;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .913rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    outline: none;
+}
+
+header {
+  background-color:var(--body-color);
+  top: 0;
+  padding: 0 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.63);
+  position: sticky;
+
+  z-index: 10;
+}
+
+#top{
+  height: 80px;
+  width: 100%;
+}
+
+.logo {
+  height: 150px;
+  margin-top: 21px;
+  align-items: center;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 25px;
+  transition: .5s;
+  border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid rgb(255, 176, 30);
+  color: rgb(255, 176, 30);
+}
+
+body {
+    scrollbar-width: 0.2px;
+    height: 100%;
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+.bx-left-arrow-alt{
+  position: absolute;
+  font-size: 40px;
+  top: 14%;
+  left: 2%;
+}
+
+.head{
+  justify-content: center;
+  font-size: 65px;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.bx-coffee{
+  position: relative;
+  top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bx-cart-add{
+  transition:box-shadow 0.3s;
+  background-color: white;
+  position: relative;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  z-index: 1;
+  left: 85%;
+  top: 10%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  margin-inline: 1.5rem;
+  padding-bottom: 3rem;
+  place-items: center;
+  display: grid;
+  height: 100%;
+}
+
+.card-container {
+  display: grid;
+  row-gap: 3rem;
+  column-gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  width: 348px;
+}
+
+.card-data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+  width: 316px;
+  padding-inline: 1.5rem;
+}
+
+.best{
+  color: rgb(255, 255, 255);
+  text-shadow:
+  0px 0px 5px #000000d2,
+  0px 0px 5px #000000d2,
+  0px 0px 5px #000000d2;
+  position: absolute;
+  letter-spacing: 0.3px;
+  font-family: 'poppins', sans-serif;
+  z-index: 1;
+  left: 5%;
+  top: 10%;
+}
+
+.card-description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+  letter-spacing: .5px;
+}
+
+.card-title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card-price{
+  margin-bottom: .75rem;
+  color: rgb(0, 156, 0);
+}
+
+.card-desc{
+  margin-bottom: .55rem;
+  font-family: 'poppins', sans-serif;
+  font-size: 13px;
+}
+
+.card-button:hover {
+  text-decoration: underline;
+}
+
+.label{
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  letter-spacing: .5px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-size: 25px;
+  display: flex;
+}
+
+/*hover */
+.card-article:hover .card-data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card-article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data {
+  animation: remove-data 1s forwards;
+}
+
+.card-img:hover{
+    box-shadow: 0px 0px 15px rgb(0, 0, 0); 
+    border: 2px solid black;
+    transition-delay: 0.7s;
+    transform: scale(1.05);
+}
+
+.bx-cart-add:hover{
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.514); 
+  cursor:pointer
+}
+
+.bx-left-arrow-alt:hover{
+  color: rgb(231, 150, 0);
+  cursor: pointer;
+}

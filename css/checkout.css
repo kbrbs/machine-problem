@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bubblegum+Sans&family=Great+Vibes&family=Kavoon&family=Luckiest+Guy&family=Montez&family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+:root {
+    /* Colors */
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: #fff3d8;
+    --container-color: hsl(0, 0%, 100%);
+
+    /* Font and typography */
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --small-font-size: .913rem;
+    --h2-font-size: 1.25rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#checkout {
+    justify-content: center;
+    margin-top: 40px;
+    display: none;
+    height: 100%;
+}
+
+#close {
+    position: absolute;
+    font-size: 35px;
+    display: none;
+    left: 87.8%;
+    top: 22.7%
+}
+
+.checkout-container {
+    grid-template-columns: 50% 1fr 1fr;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    place-items: center;
+    display: grid;
+    width: 80%;
+    gap: 50px;
+}
+
+.items-container,
+.checklist,
+.receipt {
+    box-shadow: 0px 0px 15px #000000;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.checklist, .receipt{
+    background-color:rgb(255, 225, 170);
+    color: rgb(0, 0, 0);
+}
+
+.checklist h1, .receipt h1{
+    text-shadow:
+        0px 0px 5px #000000d2,
+        0px 0px 5px #000000d2,
+        0px 0px 5px #000000d2;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.checklist label, .receipt label{
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.checklist label{
+    line-height: 29px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.receipt input{
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.receipt button{
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    letter-spacing: 1px;
+    margin-left: 22%;
+    font-size: 17px;
+    cursor: pointer;
+    height: 30px;
+    width: 50%;
+}
+
+.receipt button:hover{
+    transform: scale(1.05);
+}
+
+#selected-item{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.item-img {
+    filter: drop-shadow(0px 8px 10px rgb(0, 0, 0)) ;
+    position: relative;
+    width: 400px;
+    top: -30px;
+    z-index: 1;
+}
+
+.svg, .svg2, .svg3{
+    position: absolute;
+    width: 763px;
+    top:211px;
+}
+
+.svg2{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.svg{
+    top: 333px;
+}
+
+.svg3{
+    top: 473px;
+    
+}
+
+.item-name {font-family: "Chela One", system-ui;
+    letter-spacing: 3px;
+    position: absolute;
+    font-size: 75px;
+}
+
+#name1, #name3{
+    text-shadow:
+        0px 0px 2px #000000d2,
+        0px 0px 3px #000000d2,
+        0px 0px 4px #000000d2;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#name2{
+    text-shadow:
+        0px 0px 2px #000000d2,
+        0px 0px 3px #000000d2,
+        0px 0px 4px #000000d2;
+    color: rgb(255, 187, 30);
+    z-index: 1;
+    top: 550px;
+}
+
+#name1{
+    top: 250px;
+}
+
+#name3{
+    top: 395px;
+}
+
+.item-desc {
+    letter-spacing: .7px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+    width: 90%;
+}
+
+/*---------HOVER---------*/
+#close:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#selected-item {
+    opacity: 0;
+}
+
+#selected-item.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+    /* 0.5s fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

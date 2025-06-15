@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo-Fi Café | Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/lofilogoBlack.png" alt="Lo-Fi Café Logo" class="loader-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <header><h1 class="head" data-aos="fade-up"><i class='bx bx-coffee'></i> Discover Our Menu <i class='bx bx-coffee'></i></h1></header>
+
+    <i class='bx bx-left-arrow-alt' onclick="goHome(event)"></i>
+
+    <section id="top"></section><i class='bx bx-x' id="close" onclick="checkoutClose()"></i>
+    <section id="checkout">
+        <div class="checkout-container">
+            <div class="items-container">
+                <img src="images/noBg/wave (2).png" alt="" class="svg2">
+                <img src="images/noBg/wave.png" alt="" class="svg">
+                <img src="images/noBg/wave3.png" alt="" class="svg3">
+                <div id="selected-item"></div>
+            </div>
+            <div class="checklist">
+                <h1>Your Coffee Ingredients</h1>
+
+                <form action="/submit" method="POST">
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="warm-milk" disabled> Warm milk
+                        (not frothed)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="vanilla-ice-cream" disabled>
+                        Vanilla ice cream
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="chocolate-syrup" disabled>
+                        Chocolate syrup
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="whipped-cream" disabled>
+                        Whipped cream
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="caramel-sauce" disabled>
+                        Caramel sauce
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="cocoa-powder" disabled> Cocoa
+                        powder
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="steamed-milk" disabled>
+                        Steamed milk
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="irish-whiskey" disabled> Irish
+                        whiskey
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="vanilla-syrup" disabled>
+                        Vanilla syrup
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="brown-sugar" disabled> Brown
+                        sugar
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="cold-water" disabled> Cold
+                        water
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="milk-foam" disabled> Milk foam
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="ice-cubes" disabled> Ice cubes
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="espresso" disabled> Espresso
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="ingredients" class="ingredients" id="water" disabled> Water
+                    </label><br>
+                </form>
+            </div>
+
+            <div class="receipt">
+                <h1>Place Your Order</h1>
+
+                <form action="/submit-order" method="POST">
+                    <!-- Name Input -->
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                    <!-- Address Input -->
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
+                    <!-- Flavor Selection -->
+                    <label for="flavor">Flavor:</label><br>
+                    <input type="text" id="flavor" name="flavor" readonly><br><br>
+
+                    <!-- Price Input -->
+                    <label for="price">Price:</label><br>
+                    <input type="text" id="price" name="price" step="0.01" readonly><br><br>
+
+                    <!-- Payment Input -->
+                    <label for="payment">Payment (₱):</label><br>
+                    <input type="number" id="payment" name="payment" placeholder="Enter your payment" step="0.01"
+                        required><br><br>
+
+                    <!-- Change Display (This can be calculated with JavaScript) -->
+                    <label for="change">Change:</label><br>
+                    <input type="text" id="change" name="change" readonly><br><br>
+
+                    <!-- Place Order Button -->
+                    <button type="button" onclick="checkout()">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="product">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-container">
+                <article class="card-article">
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Cappuccino', 'Mellow Beat Cappuccino', 150, 'images/noBg/cappuccino.png', 'A classic Italian coffee with equal parts espresso, steamed milk, and foam.', 0)"></i>
+                    <img src="images/cappuccino.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description" id="cappuccino">Cappuccino</span>
+                        <h2 class="card-title">Mellow Beat Cappuccino</h2>
+                        <h4 class="card-price">&#8369;150</h4>
+                        <p class="card-desc">A classic Italian coffee with equal parts espresso, steamed milk, and foam.
+                        </p>
+                    </div>
+                    <h1 class="label">Mellow Beat Cappuccino</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Café au Lait','Milky Melody', 150, 'images/noBg/cafe-au-lait.png', 'A French-style coffee made with equal parts brewed coffee and steamed milk.', 1)"></i>
+                    <img src="images/cafe-au-lait.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Café au Lait</span>
+                        <h2 class="card-title">Milky Melody</h2>
+                        <h4 class="card-price">&#8369;150</h4>
+                        <p class="card-desc">A French-style coffee made with equal parts brewed coffee and steamed milk.
+                        </p>
+                    </div>
+                    <h1 class="label">Milky Melody</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Latte','Lo-Fi Layers', 160, 'images/noBg/latte.png', 'A popular coffee drink made with espresso and steamed milk, topped with a small amount of foam.', 3)"></i>
+                    <img src="images/latte.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Latte</span>
+                        <h2 class="card-title">Lo-Fi Layers</h2>
+                        <h4 class="card-price">&#8369;160</h4>
+                        <p class="card-desc">A popular coffee drink made with espresso and steamed milk, topped with a
+                            small amount of foam.</p>
+                    </div>
+                    <h1 class="label">Lo-Fi Layers</h1>
+                </article>
+
+                <article class="card-article">
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Flat White','Flat Vinyl White', 160, 'images/noBg/flat-white.png', 'A smooth coffee with microfoam milk, featuring a stronger espresso flavor than a latte.', 2)"></i>
+                    <img src="images/flat-white.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+
+                        <span class="card-description">Flat White</span>
+                        <h2 class="card-title">Flat Vinyl White</h2>
+                        <h4 class="card-price">&#8369;160</h4>
+                        <p class="card-desc">A smooth coffee with microfoam milk, featuring a stronger espresso flavor
+                            than a latte.</p>
+                    </div>
+                    <h1 class="label">Flat Vinyl White</h1>
+                </article>
+
+                <article class="card-article">
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Espresso','Lo-Fi Espresso Shot', 120, 'images/noBg/espresso.png', 'A strong, concentrated coffee brewed by forcing hot water through finely-ground coffee beans.', 4)"></i>
+                    <img src="images/espresso.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+
+                        <span class="card-description">Espresso</span>
+                        <h2 class="card-title">Lo-Fi Espresso Shot</h2>
+                        <h4 class="card-price">&#8369;120</h4>
+                        <p class="card-desc">A strong, concentrated coffee brewed by forcing hot water through
+                            finely-ground coffee beans.</p>
+                    </div>
+                    <h1 class="label">Lo-Fi Espresso Shot</h1>
+                </article>
+
+                <article class="card-article">
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Café Mocha','Chill Vibes Mocha', 170, 'images/noBg/mocha.png', 'A chocolate-flavored coffee drink combining espresso, chocolate, and milk.', 5)"></i>
+                    <img src="images/mocha.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+
+                        <span class="card-description">Café Mocha</span>
+                        <h2 class="card-title">Chill Vibes Mocha</h2>
+                        <h4 class="card-price">&#8369;170</h4>
+                        <p class="card-desc">A chocolate-flavored coffee drink combining espresso, chocolate, and milk.
+                        </p>
+                    </div>
+                    <h1 class="label">Chill Vibes Mocha</h1>
+                </article>
+
+                <article class="card-article">
+
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Iced Americano','Iced Rhythm Americano', 140, 'images/noBg/americano.png', 'A cold, refreshing black coffee made by diluting espresso with cold water and ice.', 6)"></i>
+                    <img src="images/americano.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Iced Americano</span>
+                        <h2 class="card-title">Iced Rhythm Americano</h2>
+                        <h4 class="card-price">&#8369;140</h4>
+                        <p class="card-desc">A cold, refreshing black coffee made by diluting espresso with cold water
+                            and ice.</p>
+                    </div>
+                    <h1 class="label">Iced Rhythm Americano</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Affogato','Sweet Static', 190, 'images/noBg/affogato.png', 'A dessert coffee made by pouring hot espresso over a scoop of ice cream.', 7)"></i>
+                    <img src="images/affogato.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Affogato</span>
+                        <h2 class="card-title">Sweet Static</h2>
+                        <h4 class="card-price">&#8369;190</h4>
+                        <p class="card-desc">A dessert coffee made by pouring hot espresso over a scoop of ice cream.
+                        </p>
+                    </div>
+                    <h1 class="label">Sweet Static</h1>
+                </article>
+
+                <article class="card-article">
+                    <p class="best"><i class='bx bxs-star'></i>Best seller</p>
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Caramel Macchiato','Echo Caramel Macchiato', 180, 'images/noBg/macchiato.png', 'A sweet, layered coffee drink made with espresso, milk, and caramel.', 8)"></i>
+                    <img src="images/macchiato.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+
+                        <span class="card-description">Caramel Macchiato</span>
+                        <h2 class="card-title">Echo Caramel Macchiato</h2>
+                        <h4 class="card-price">&#8369;180</h4>
+                        <p class="card-desc">A sweet, layered coffee drink made with espresso, milk, and caramel.</p>
+                    </div>
+                    <h1 class="label">Echo Caramel Macchiato</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Irish Coffee','Whiskey Rhythm', 200, 'images/noBg/irish-coffee.png', 'A warming coffee cocktail made with Irish whiskey, coffee, and whipped cream.', 9)"></i>
+                    <img src="images/irish-coffee.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Irish Coffee</span>
+                        <h2 class="card-title">Whiskey Rhythm</h2>
+                        <h4 class="card-price">&#8369;200</h4>
+                        <p class="card-desc">A warming coffee cocktail made with Irish whiskey, coffee, and whipped
+                            cream.</p>
+                    </div>
+                    <h1 class="label">Whiskey Rhythm</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Cortado','Syncopated Sip', 140, 'images/noBg/cortado.png', 'A balanced coffee drink made with equal parts espresso and warm milk.', 10)"></i>
+                    <img src="images/cortado.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Cortado</span>
+                        <h2 class="card-title">Syncopated Sip</h2>
+                        <h4 class="card-price">&#8369;140</h4>
+                        <p class="card-desc">A balanced coffee drink made with equal parts espresso and warm milk.</p>
+                    </div>
+                    <h1 class="label">Syncopated Sip</h1>
+                </article>
+
+                <article class="card-article">
+                    <i class='bx bx-cart-add'
+                        onclick="buy('Doppio','Double Drop', 130, 'images/noBg/doppio.png', 'A double shot of espresso for a bolder coffee experience.', 11)"></i>
+                    <img src="images/doppio.png" alt="image" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Doppio</span>
+                        <h2 class="card-title">Double Drop</h2>
+                        <h4 class="card-price">&#8369;130</h4>
+                        <p class="card-desc">A double shot of espresso for a bolder coffee experience.</p>
+                    </div>
+                    <h1 class="label">Double Drop</h1>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contactDiv">
+            <div class="conmission">
+                <p class="mission"> Our mission is to create a peaceful <br>retreat for coffee lovers and lofi
+                    enthusiasts,
+                    <br>where the
+                    rhythms of relaxing beats <br>and the aroma of carefully crafted <br>coffee blend into the perfect
+                    escape.
+                </p>
+            </div>
+
+            <div class="conloc">
+                <h2 class="storeLoc">Store Locations</h2>
+                <p class="storeDesc">Find the nearest Lo-fi Café with opening <br>hours, location and contact details.
+                </p>
+                <a href="https://maps.app.goo.gl/2xKnDLJJpF4PCoQL6" target="_blank" class="mapLink">find lo-fi café
+                    &RightArrow;</a>
+            </div>
+
+            <div class="conlogo">
+                <img src="images/lofiLogo3.png" alt="" class="logoCon">
+            </div>
+
+            <div class="contacts">
+                <h2 class="contactLofi">Contact Lo-fi Café</h2>
+                <p><i class='bx bx-envelope'></i> barbosakat26@gmail.com</p>
+                <p><i class='bx bx-phone'></i> +639488439797</p>
+                <p><i class='bx bxl-facebook-circle'><a href="https://www.facebook.com/katrinamicaella.barbosa"
+                            target="_blank" class="fb">
+                            Katrina Micaella Barbosa</a></i></p>
+            </div>
+
+            <div class="conemail">
+                <h2 class="userEmail">Join our email list for 10% <br>of your first order</h2>
+                <input type="email" class="emailIn" placeholder="Email Address">
+                <button>Subscribe</button>
+                <footer>Copyright &copy; 2024 <strong>Lo-fi Café</strong></footer>
+            </div>
+            <hr class="foot">
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

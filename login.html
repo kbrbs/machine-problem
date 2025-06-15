@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Lo-Fi Café | LogIn/Register</title>
+</head>
+
+<body>
+    <div class="bgContainer">
+        <video muted loop autoplay controls">
+            <source src="images/bg.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container" id="registerPage">
+        <h1 class="formTitle">REGISTER</h1>
+        <form action="" id="formReg">
+            <div class="inputs">
+                <i class='bx bxs-user-account' id="fnameIcon"></i>
+                <input type="text" name="fname" id="fname" placeholder="Full Name">
+                <label for="fname">Full Name</label>
+                <i class='bx bxs-error-circle' id="fnameError"></i>
+            </div>
+
+            <div class="inputs">
+                <i class='bx bxs-envelope' id="emailRegIcon"></i>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="email">Email</label>
+                <i class='bx bxs-error-circle' id="emailError"></i>
+            </div>
+
+            <div class="inputs">
+                <i class='bx bx-lock' id="passRegIcon"></i>
+                <input type="password" name="pass" id="pass" placeholder="Password" >
+                <label for="pass">Password</label>
+                <i class='bx bxs-error-circle' id="passError"></i>
+            </div>
+            <div class="inputs">
+                <i class='bx bx-lock' id="passConIcon"></i>
+                <input type="password" name="passCon" id="passCon" placeholder="Confirm Password" >
+                <label for="passCon">Confirm Password</label>
+                <i class='bx bxs-error-circle' id="passConError"></i>
+                <i class='bx bx-show' onclick="showPass()" id="showRegCon"></i>
+                <i class='bx bxs-hide' onclick="showPass()" id="hideRegCon"></i>
+            </div>
+            <button class="button" id="signupBtn" name="signUp" onclick="registerAcc(event)">Sign Up</button>
+        </form>
+        <p class="log">Already have an account? <button class="link" id="gotoLogin" onclick="gotoLogin()">Sign
+                In</button></p>
+    </div>
+
+    <div class="container" id="loginPage">
+        <h1 class="formTitle">SIGN IN</h1>
+        <div class="error"></div>
+        <form action="" id="formLog">
+            <div class="inputs">
+                <i class='bx bxs-envelope' id="emailIcon"></i>
+                <input type="email" name="emailLog" id="emailLog" placeholder="Email">
+                <label for="emailLog">Email</label>
+                <i class='bx bxs-error-circle' id="emailLogError"></i>
+            </div>
+            <div class="inputs">
+                <i class='bx bx-lock' id="passIcon"></i>
+                <input type="password" name="passLog" id="passLog" placeholder="Password" >
+                <label for="passLog">Password</label>
+                <i class='bx bxs-error-circle' id="passLogError"></i>
+                <i class='bx bx-show' onclick="showPass()" id="show"></i>
+                <i class='bx bxs-hide' onclick="showPass()" id="hide"></i>
+            </div>
+            <button class="button" id="signinBtn" onclick="login(event)">Sign In</button>
+        </form>
+        <p class="reg">Don't have an account yet? <button class="link" id="gotoSignup" onclick="gotoSignup()">Register</button></p>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>

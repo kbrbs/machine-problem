@@ -1,0 +1,114 @@
+header {
+    grid-template-columns: 88px 1fr calc(var(--w-image) * var(--calculate));
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.63);
+    background-color: rgba(24, 24, 24, 0.507);
+    justify-content: space-between;
+    grid-template-rows: 80px;
+    align-items: center;
+    position: sticky;
+    padding: 0 85px;
+    display: flex;
+    height: 70px;
+    z-index: 10;
+    top: 0;
+}
+
+.logo {
+    margin-top: 7px;
+    height: 60px;
+}
+
+nav a,
+.links {
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a {
+    border: 2px solid transparent;
+    margin-right: 25px;
+    transition: .5s;
+}
+
+#user{
+    font-size: 40px;
+    display: none;
+    border: none;
+}
+
+#signInHome{
+    display:none;
+}
+
+.links {
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-bottom: 13px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 19px;
+    transition: .4s;
+    top: 7px;
+}
+
+#signInHome:hover {
+    background-color: rgba(255, 166, 0, 0.767);
+    text-shadow:
+        -0.5px 2px 2px #000000d2,
+        -0.5px 3px 3px #000000d2,
+        -0.5px 4px 4px #000000d2;
+}
+
+#user:hover {
+    color: rgb(255, 166, 0);
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid rgb(255, 202, 103);
+    color: rgb(255, 202, 103);
+    text-decoration: none;
+    color: white;
+}
+
+.logout-container{
+    position: absolute;
+    padding:20px 10px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    left: 89.4%;
+    z-index: 100;
+    top:55px;
+    font-size: 20px;
+    display: none;
+}
+
+.logout-container hr{
+    width: 100%;
+    left: 0%;
+}
+
+.nameUser{
+    padding-bottom: 5px;
+}
+
+.logoutbtn{
+    padding-top: 5px;
+    cursor: pointer;
+    letter-spacing: 1.5x;
+}
+
+.logoutbtn:hover{
+    text-shadow:
+        0px 0px 2px #000000d2,
+        0px 0px 3px #000000d2,
+        0px 0px 4px #000000d2;
+    font-weight: bold;
+    color: rgb(255, 189, 68);
+}

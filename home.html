@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <title>Lo-Fi Café | Home</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/preloader.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader">
+      <img src="images/lofilogoBlack.png" alt="Hey Brew Logo" class="loader-logo">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <header>
+    <a class="headTitle" href="home.html"><img src="images\lofilogo3.png" alt="" class="logo" /></a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About us</a>
+      <a href="#product">Menu</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+    <a href="login.html" class="links" id="signInHome">Log In</a>
+    <a href="" class="links" id="user" onclick="userClick(event)"><i class='bx bxs-user-circle'></i></a>
+
+  <div class="logout-container">
+    <p class="nameUser">User: Admin</p><hr>
+    <p class="logoutbtn" onclick="logout()">Log Out</p>
+  </div>
+  </header>
+
+
+  <section id="home">
+    <img src="images/bg1.jpg" class="bgContainer1">
+    <img src="images/coffee.png" class="coffee">
+    <div class="vapor">
+      <span style="--i: 1"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 20"></span>
+      <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 8"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 2"></span>
+      <span style="--i: 9"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 4"></span>
+      <span style="--i: 19"></span>
+    </div>
+    <div class="vapor1">
+      <span style="--i: 1"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 20"></span>
+      <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 8"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 2"></span>
+      <span style="--i: 9"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 4"></span>
+      <span style="--i: 19"></span>
+    </div>
+    <div class="vapor2">
+      <span style="--i: 1"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 20"></span>
+      <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 8"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 2"></span>
+      <span style="--i: 9"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 4"></span>
+      <span style="--i: 19"></span>
+    </div>
+    <h1 class="header" data-aos="fade-up">Welcome to Lo-Fi Café</h1>
+    <p class="subheader" data-aos="fade-up" data-aos-delay="100">
+      Immerse yourself in a space where rich flavors come to life. Indulge in
+      every sip <br />while soaking in the soothing atmosphere. Experience the
+      perfect blend of taste <br />and mellow vibes.
+    </p>
+    <button id="seeMenu" onclick="seeMenu(event)" data-aos="fade-up" data-aos-delay="200">Explore Our Menu</button>
+  </section>
+
+  <section id="about">
+    <div class="top">
+      <img src="images/displayCoffee2.jpg" alt="" class="displayCoffee2" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="headAbout" data-aos="fade-up">About Us</h2>
+      <hr data-aos="fade-up" data-aos-delay="250">
+      <p class="descAbout" data-aos="fade-up" data-aos-delay="250">
+        At Lo-Fi Café, we believe that coffee is more than just a drink—it's
+        an experience. Our café is designed to be a retreat from the
+        fast-paced world, offering you a place where you can slow down and
+        savor each moment. Here, rich flavors come to life with every cup, and
+        the atmosphere invites you to relax, unwind, and enjoy. Our space is
+        thoughtfully crafted to blend the warmth of a cozy café with the
+        mellow vibes of lo-fi music. Whether you're here to enjoy a quiet
+        moment alone, catch up with friends, or fuel your creative work, we
+        provide the perfect setting for it all. Surrounded by soothing beats,
+        soft lighting, and the aroma of freshly brewed coffee, you'll feel
+        instantly at home. At Lo-Fi Café, we aren't just serving coffee—we're
+        curating an experience. From the carefully selected beans to the
+        chill, welcoming ambiance, we&apos;re committed to making every visit
+        special... <a href="about.html" class="readMore">Read More &RightArrow;</a>
+      </p>
+      
+
+      <img src="images/openhrs.png" alt="open hours" class="openhrs" data-aos="fade-up" data-aos-delay="250">
+
+      <p class="quote" data-aos="fade-up" data-aos-delay="250"><i class='bx bxs-quote-left'></i> Life’s a playlist, and a lofi
+        café is the perfect track—where every sip warms the soul, and every beat makes worries fade into the
+        background. <i class='bx bxs-quote-right'></i>
+      </p>
+    </div>
+
+    <div class="bottom">
+      <div class="container" id="container">
+        <hr class="left" data-aos="fade-up">
+        <h3  data-aos="fade-up">We provide you with</h3>
+        <hr class="right" data-aos="fade-up">
+        <div class="key-items">
+          <div class="item" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class='bx bxs-happy'></i></div>
+            <h4>A Unique Blend of Coffee and Creativity</h4>
+            <p>It’s more than just coffee; it’s a place where ideas flow, creativity thrives, and everyone feels at
+              home.</p>
+          </div>
+
+          <div class="item" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class='bx bxs-music'></i></div>
+            <h4>Chill Atmosphere with Lofi Beats</h4>
+            <p>Whether you're looking for a quiet spot to read or a laid-back space to
+              recharge, our cafe offers a unique vibe you won’t find elsewhere.</p>
+          </div>
+
+          <div class="item" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class='bx bxs-coffee-bean'></i></div>
+            <h4>Customizable, High-Quality Coffee</h4>
+            <p>With our wide range of customizable options—including unique flavors, plant-based milk, and seasonal
+              specialties—you can always find the perfect drink to match your mood.</p>
+          </div>
+
+          <div class="item" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class='bx bxs-donate-heart'></i></div>
+            <h4>Sustainability and Community Focus</h4>
+            <p>We’re committed to doing good for both our community and the planet. From eco-friendly packaging to
+              supporting local artists and musicians, our cafe strives to make a positive impact.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="carousel next" id="product">
+    <img src="images/prodBG1.png" alt="" class="prodBG" />
+    <div class="bgdrop"></div>
+    <div class="list">
+      <p class="bestSeller">
+        <i class="bx bxs-star" id="star"></i> Our Best Sellers:
+      </p>
+      <article class="item other_1">
+        <div class="main-content">
+          <div class="content">
+            <h2>Iced Rhythm Americano</h2>
+            <p class="price">&#8369;140</p>
+            <p class="description">
+              A refreshing iced Americano that’s as crisp and steady as your
+              favorite chill tunes. It’s the ideal companion for cooling off
+              while staying energized.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/americano.png" alt="" class="imgCarousel" id="americano" />
+          <figcaption>Iced Americano</figcaption>
+        </figure>
+      </article>
+
+      <article class="item active">
+        <div class="main-content">
+          <div class="content">
+            <h2>Mellow Beat Cappuccino</h2>
+            <p class="price">&#8369;150</p>
+            <p class="description">
+              A smooth and harmonious cappuccino that reflects the laid-back
+              feel of Lo-Fi music. Its balance of milk and espresso creates a
+              mellow, comforting vibe.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/cappuccino.png" alt="" class="imgCarousel" id="cappuccino" />
+          <figcaption>Cappuccino</figcaption>
+        </figure>
+      </article>
+
+      <article class="item other_2">
+        <div class="main-content">
+          <div class="content">
+            <h2>Chill Vibes Mocha</h2>
+            <p class="price">&#8369;170</p>
+            <p class="description">
+              A sweet fusion of espresso and chocolate that’s ideal for
+              relaxing moments. The rich flavors make it a perfect choice for
+              unwinding after a long day.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/mocha.png" alt="" class="imgCarousel" id="mocha" />
+          <figcaption>Café Mocha</figcaption>
+        </figure>
+      </article>
+
+      <article class="item">
+        <div class="main-content">
+          <div class="content">
+            <h2>Lo-Fi Espresso Shot</h2>
+            <p class="price">&#8369;120</p>
+            <p class="description">
+              A bold, no-nonsense shot of espresso to give your day a powerful
+              start. Perfect for those who crave a strong, undiluted coffee
+              experience.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/espresso.png" alt="" class="imgCarousel" id="espresso" />
+          <figcaption>Espresso</figcaption>
+        </figure>
+      </article>
+
+      <article class="item">
+        <div class="main-content">
+          <div class="content">
+            <h2>Echo Caramel Macchiato</h2>
+            <p class="price">&#8369;180</p>
+            <p class="description">
+              A beautifully layered caramel macchiato that radiates warmth
+              with each sip. Its rich sweetness mimics the comforting echo of
+              a slow, cozy Lo-Fi track.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/macchiato.png" alt="" class="imgCarousel" id="macchiato" />
+          <figcaption>Caramel Macchiato</figcaption>
+        </figure>
+      </article>
+
+      <article class="item">
+        <div class="main-content">
+          <div class="content">
+            <h2>Flat Vinyl White</h2>
+            <p class="price">&#8369;160</p>
+            <p class="description">
+              A creamy flat white with a silky texture, just like the soothing
+              sound of a classic vinyl record. This drink delivers a velvety
+              smooth finish with every sip.
+            </p>
+            <button class="addToCart" onclick="seeMenu(event)">Order now</button>
+          </div>
+        </div>
+        <figure class="image">
+          <img src="images/flat-white.png" alt="" class="imgCarousel" id="flat" />
+          <figcaption>Flat White</figcaption>
+        </figure>
+      </article>
+    </div>
+    <div class="arrows">
+      <button id="prev">&lt;</button>
+      <button id="next">&gt;</button>
+    </div>
+  </section>
+
+  <div class="review">
+    <hr class="left" data-aos="fade-up">
+    <p class="revHead" data-aos="fade-up">Testimonials</p>
+    <hr class="right" data-aos="fade-up">
+    <div class="revItems">
+      <div class="comments" data-aos="fade-up" data-aos-delay="100">
+        <i class='bx bx-coffee-togo' id="iconCoffee1"></i>
+        <i class='bx bxs-quote-alt-left'></i>
+        <h3>A Cozy Escape with Perfect Coffee</h3>
+        <p>"Lo-Fi Café has quickly become my go-to spot for relaxing and enjoying a
+          perfectly brewed cup of coffee. The cozy ambiance, combined with chill music, creates the perfect atmosphere
+          for unwinding or getting some work done. The staff is always friendly, and their menu offers unique add-ons
+          that make each drink customizable to my taste. Highly recommended!"</p>
+        <img src="images/img2.jpg" alt="" class="img">
+        <h2>Alice P.</h2>
+      </div>
+      <div class="comments" data-aos="fade-up" data-aos-delay="200">
+        <i class='bx bx-coffee-togo' id="iconCoffee2"></i>
+        <i class='bx bxs-quote-alt-left'></i>
+        <h3>Quality Coffee in a Laid-Back Vibe</h3>
+        <p>"I’ve been to many cafés, but Lo-Fi Café stands out for its cool vibes and excellent coffee. Their premium
+          ingredients and personalized add-ons make every cup special. I love how they combine quality service with a
+          laid-back environment. It’s the ideal place for a casual hangout. Definitely a hidden gem!"</p>
+        <img src="images/img1.jpg" alt="" class="img">
+        <h2>Michael T.</h2>
+      </div>
+      <div class="comments" data-aos="fade-up" data-aos-delay="300">
+        <i class='bx bx-coffee-togo' id="iconCoffee3"></i>
+        <i class='bx bxs-quote-alt-left'></i>
+        <h3>My Top Spot for Chill and Coffee</h3>
+        <p> "Lo-Fi Café offers the perfect balance of great coffee and a chill atmosphere. The playlist is
+          always on point, and I love being able to personalize my drinks with the various flavor add-ons. Whether I’m
+          meeting friends or just taking some me-time, Lo-Fi Café is my top choice for coffee in the city!"</p>
+        <img src="images/img3.jpg" alt="" class="img">
+        <h2>Sarah L.</h2>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="contactDiv">
+      <div class="conmission">
+        <p class="mission"> Our mission is to create a peaceful <br>retreat for coffee lovers and lofi enthusiasts,
+          <br>where the
+          rhythms of relaxing beats <br>and the aroma of carefully crafted <br>coffee blend into the perfect escape.
+        </p>
+      </div>
+
+      <div class="conloc">
+        <h2 class="storeLoc">Store Locations</h2>
+        <p class="storeDesc">Find the nearest Lo-fi Café with opening <br>hours, location and contact details.</p>
+        <a href="https://maps.app.goo.gl/2xKnDLJJpF4PCoQL6" target="_blank" class="mapLink">find lo-fi café
+          &RightArrow;</a>
+      </div>
+
+      <div class="conlogo">
+        <img src="images/lofiLogo3.png" alt="" class="logoCon">
+      </div>
+
+      <div class="contacts">
+        <h2 class="contactLofi">Contact Lo-fi Café</h2>
+        <p><i class='bx bx-envelope'></i> barbosakat26@gmail.com</p>
+        <p><i class='bx bx-phone'></i> +639488439797</p>
+        <p><i class='bx bxl-facebook-circle'><a href="https://www.facebook.com/katrinamicaella.barbosa" target="_blank"
+              class="fb">
+              Katrina Micaella Barbosa</a></i></p>
+      </div>
+
+      <div class="conemail">
+        <h2 class="userEmail">Join our Email List Now!</h2>
+        <input type="email" class="emailIn" placeholder="Email Address" id="emailList">
+        <button onclick="subscribe()">Subscribe</button>
+        <footer>Copyright &copy; 2024 <strong>Lo-fi Café</strong></footer>
+      </div>
+      <hr class="foot">
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/slider.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#contact {
+    width: 100%;
+    background-image: url("../images/footerBg.jpg");
+    filter: brightness(120%);
+    background-size: 100%;
+    position: relative;
+    top: 80px;
+    height: 200px;
+    color: black;
+}
+
+.contactDiv{
+    background-color: #fff3d880;
+    width: 100%;
+    top: 80px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    padding: 30px;
+    padding-bottom: 0px;
+    justify-content: center;
+    letter-spacing: .5px;
+    height: 200px;
+}
+
+.conmission{
+    position: relative;
+    left: -300px;
+}
+
+.conloc{
+    position: relative;
+    left: -250px;
+    top: 30px;
+    height: 30px;
+}
+
+.conlogo{
+    position: relative;
+    left: -110px;
+}
+
+.contacts{
+    position: relative;
+    left: 70px;
+}
+
+.conemail{
+    position: relative;
+    left: 220px;
+    top: -23px;
+}
+
+.mission{
+    margin: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.storeLoc{
+    margin-bottom: 7px;
+}
+
+.storeDesc{
+    color: rgb(0, 0, 0);
+}
+
+.mapLink{
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: black;
+    letter-spacing: .5px;
+}
+
+.mapLink:hover, .fb:hover{
+    text-decoration: underline;
+}
+
+.conemail button{
+    cursor: pointer;
+    border-radius: 5px;
+    border: .5px solid black;
+}
+
+.conemail button:hover{
+    background-color: rgb(255, 172, 19);
+}
+
+.contactLofi{
+    margin-top: 30px;
+}
+
+.userEmail{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.emailIn{
+    width:190px;
+    height: 5%;
+}
+
+p{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    position: relative;
+
+}
+
+.fb{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.emailIn {
+    font-size: 17px;
+    height: 30px;
+}
+
+.conemail button{
+    padding: 3px 5px;
+    height: 23px;
+}
+
+.logoCon{
+    height: 60%;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+.imgCarousel {
+    height: 637px;
+    width: 460.05px;
+    z-index: 1;
+    border-radius: 50px;
+    box-shadow: 10px 10px 13px rgb(0, 0, 0);
+}
+
+.foot{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+footer{
+    position: absolute;
+    left: -669px;
+    top: 150px;
+    color: rgb(0, 0, 0);
+}
