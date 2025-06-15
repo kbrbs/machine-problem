@@ -1,7 +1,11 @@
-** Static web **
-email: admin@gmail.com 
-pass: admin
+### My first frondend work
 
---
+---
 
-My first frondend work
+**STATIC WEB**
+
+-email: admin@gmail.com
+
+-pass: admin
+
+
